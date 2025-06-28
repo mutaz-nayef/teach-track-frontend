@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+
+    <title>Student Management Sys</title>
+  </head>
+  <body>
+    <div id="app">
+      <div
+        hidden
+        id="ajax-response-message"
+        class="ajax-response-message"
+      ></div>
+      <div class="loader"></div>
+      <div class="wrapper">
+        <div id="header" class="header shadow">
+          <div class="search">
+            <input type="text" placeholder="Type what in your mind" />
+            <img src="../images/search.svg" width="30" alt="" />
+          </div>
+        </div>
+        <button
+          class="primary-side-toggle"
+          aria-controls="primary-side"
+          aria-expanded="false"
+        >
+          <span class="visually-hidden">Menu</span>
+          <i class="fas fa-bars"></i>
+        </button>
+        <div id="primary-side" class="side flow">
+          <div class="logo flex-col flow">
+            <img src="../src/images/Logo.png" alt="Site Logo" />
+            <span>Udemy Inter.school</span>
+          </div>
+
+          <ul class="links flow-sm" role="list">
+            <li>
+              <a href="/" data-navigo>
+                <span><img src="../src/images/home.svg" alt="" /></span>
+                Dashboard
+              </a>
+            </li>
+            <li>
+              <a href="/teachers" data-navigo>
+                <span><img src="../src/images/home.svg" alt="" /></span>
+                Teachers
+              </a>
+            </li>
+
+            <li class="list-menu">
+              <a href="javascript:void(0)" class="toggle-sub-menu">
+                <span><img src="../src/images/home.svg" alt="" /></span>
+                Students
+                <i class="fas fa-chevron-down"></i>
+              </a>
+
+              <ul class="sub-menu flow-sm" role="list">
+                <li><a href="/students" data-navigo>All Students</a></li>
+                <li><a href="/students/create" data-navigo>Add Students</a></li>
+                <li>
+                  <a href="/students/imported" data-navigo>Imported Students</a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="/billing" data-navigo>
+                <span><img src="../src/images/billing.svg" alt="" /></span>
+                Billing
+              </a>
+            </li>
+            <li>
+              <a href="/settings" data-navigo>
+                <span><img src="../src/images/setting.svg" alt="" /></span>
+                Settings & Profile
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div id="main-content" class="content flow-lg"></div>
+      </div>
+    </div>
+    <script type="module" src="src/js/main.js"></script>
+  </body>
+</html>
